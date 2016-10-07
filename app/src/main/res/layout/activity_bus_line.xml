@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/editText_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="北京" >
+
+            <requestFocus />
+        </EditText>
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="市内：" />
+
+        <EditText
+            android:id="@+id/editText_bus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="476" />
+
+        <Button
+            android:id="@+id/button_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="clickButton"
+            android:text="搜索" />
+
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/fragment_busline"
+        android:name="com.baidu.mapapi.map.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>
